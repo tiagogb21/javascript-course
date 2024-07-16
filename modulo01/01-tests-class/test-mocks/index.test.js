@@ -9,7 +9,7 @@ const assert = require("assert"); // versões mais recentes - sufixo "assert:nod
     // Segundo: transform - temos que pensar no processo
     // Terceiro: output - temos que pensar em qual resultado queremos
 
-(async () => {
+;(async () => {
         // variáveis criadas nesse bloco, SOMENTE são válidas durante a execução
         {
             const filePath = "./mocks/emptyFile-invalid.csv";
