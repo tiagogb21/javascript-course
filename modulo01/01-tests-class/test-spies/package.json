@@ -1,12 +1,9 @@
 {
-  "name": "test-stubs",
+  "name": "test-spies",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "node src/service.test.js"
-  },
-  "engines": {
-    "node": "18"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
