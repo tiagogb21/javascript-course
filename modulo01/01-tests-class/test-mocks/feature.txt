@@ -1,0 +1,13 @@
+File - checklist:
+
+    Fields:
+
+        [] id
+        [] name
+        [] profession
+        [] age
+
+    Rules:
+
+        [] should not be empty
+        [] should not be longer than 4 lines including headers
