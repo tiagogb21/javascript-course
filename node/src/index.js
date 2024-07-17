@@ -1,5 +1,5 @@
 // const callback = require('./01-callback');
-const { getUser, getPhone, getAddress } = require("./02-promise");
+const { getUser, getPhone, getAddress } = require("./async/02-promise");
 
 const messageError = (err) => console.error(`An error has occurred: ${err}`);
 
@@ -25,3 +25,4 @@ getUser()
     .catch((err) => {
         messageError(err); // Trata erro na promessa getUser()
     });
+

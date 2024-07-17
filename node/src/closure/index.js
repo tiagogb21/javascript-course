@@ -34,3 +34,18 @@ function myFunction() {
 }
 
 myFunction()
+
+let x = 1;
+
+function parentFunction() {
+    let y = 2;
+    function childFunction() {
+        console.log(x + y)
+    }
+}
+
+// Variáveis podem ser tornadas locais (privadas) com o uso de closure
+
+// Variáveis ​​globais permanecem ativas até o seu encerramento (ex.: a página foi descartada)
+
+
