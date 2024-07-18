@@ -1,26 +1,3 @@
-const person = {
-    alive: true,
-};
-
-const musician = {
-    playes: true,
-};
-
-// cada função construtora (ou objeto) tem uma propriedade chamada prototype.
-
-console.log(musician.playes);
-
-// se tentarmos acessar a propriedade alive de musician vamos obter undefined, por alive não é uma propriedade de musician, mas sim de person
-console.log(musician.alive);
-
-// podemos acessar a propriedade alive de person com musician, utilizando prototype
-// prototype é uma forma de fazer com que objetos herdem propriedades de outros objetos
-musician.__proto__ = person;
-
-console.log(musician.alive);
-
-console.log(musician.__proto__);
-
 // Função construtora
 function Pokemon(name) {
     this.name = name;
