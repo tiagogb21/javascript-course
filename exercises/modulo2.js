@@ -1,3 +1,5 @@
+const assert = require("assert");
+
 // Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:
 
 function showEven(n1, n2) {
@@ -5,4 +7,6 @@ function showEven(n1, n2) {
     return Array.from({ length: Math.floor((n2 - n1) / 2) + 1 }, (_, i) => n1 + i * 2);
 }
 
-console.log(showEven(1, 15));
+(() => {
+    assert.deepEqual(showEven(1, 15), [2,4,6,8,10,12,14]);
+})()
