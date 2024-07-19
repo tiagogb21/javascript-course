@@ -1,0 +1,15 @@
+1 - Referências circulares NÃO são permitidas
+
+    Ou seja o pai não pode herdar do filho
+
+    ex.: guitarist herdar de musician e depois musiciar herdar de guitarist
+
+2 - O valor de __proto__ DEVE ser um objeto ou null
+
+3 - Um objeto somente pode herdar diretamente de outro objeto
+
+
+
+Pegando as chaves de um objeto:
+
+1 - Object.keys(obj)
