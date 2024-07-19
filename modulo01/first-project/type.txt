@@ -1,0 +1,1 @@
+npm ci --> restaura as dependências sem ter problema de versão
