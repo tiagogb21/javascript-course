@@ -1,8 +1,20 @@
+'use strict';
+
 // Coleção de pares chave-valor, onde as chaves podem ser de qualquer tipo (incluindo objetos e funções).
 
 // preserva a ordem de inserção das chaves e oferece métodos eficientes para adicionar, remover e acessar valores.
 
-// obs.: uma chave em um map pode ocorrer apenas uma vez
+// Características Principais:
+    // Chaves: Podem ser de qualquer tipo.
+        // obs.: uma chave em um map pode ocorrer apenas uma vez
+    // Ordem: Mantém a ordem de inserção.
+
+// Métodos:
+    // set(key, value): Adiciona ou atualiza um par chave-valor.
+    // get(key): Retorna o valor associado à chave.
+    // has(key): Verifica se a chave existe.
+    // delete(key): Remove o par chave-valor.
+    // size: Retorna o número de pares chave-valor.
 
 let map = new Map();
 
@@ -39,3 +51,29 @@ console.log('----------------------------');
 map.set(newObj, "objeto");
 
 console.log(map);
+
+if(map.has(obj)) {
+    map.delete(obj);
+    map.set({}, "objeto")
+}
+
+console.log(map);
+
+console.log('----------------------------');
+
+// Se tentarmos declarar um objeto com duas chaves iguais
+// Vai acontecer da chave que está mais embaixo substituir a chave que está mais acima
+const objWithSamekey = {
+    'a': 1,
+    'a': 2,
+}
+
+console.log(objWithSamekey)
+
+// Se quisermos garantir que os valores sejam únicos
+const mapWithSameKey = new Map();
+
+mapWithSameKey.set('a', 1);
+mapWithSameKey.set('a', 2);
+
+console.log(mapWithSameKey)
