@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx mocha **/**/*.test.js",
+    "test:dev": "npx mocha -w -parallel **/**/*.test.js",
+    "test:cov": "npx nyc npx mocha **/**/*.test.js",
     "seed": "node seed"
   },
   "keywords": [],
@@ -12,10 +14,11 @@
   "description": "",
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
-    "chai": "^5.1.1",
-    "mocha": "^10.6.0",
-    "nyc": "^17.0.0",
-    "supertest": "^7.0.0"
+    "chai": "^4.2.0",
+    "faker": "^5.1.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.1"
   },
   "dependencies": {
     "faker": "^5.1.0"
