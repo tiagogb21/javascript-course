@@ -103,39 +103,59 @@ console.log("----------------------------");
   * - size
   */
 
-console.log(map.has(50));
+map.set(51, 'I am the number 51');
 
-map.delete(50);
+console.log(`Map has the key 51: ${map.has(51)}`);
 
-console.log(map.has(50));
+if(map.has(51)) {
+    map.delete(51);
+}
 
-// map.clear
+console.log(`Map has the key 51: ${map.has(51)}`);
+
+console.log("----------------------------");
+
+// Para mostrar o valor das chaves:
+
+console.log(Array.from(map.keys()));
 
 map.forEach(function (value, key) {
     console.log(key);
 });
 
-for (let [key, value] of map) {
-    console.log(value);
-}
-
-//console.log([...map.keys()])
-
 for (let k of map.keys()) {
     console.log("id", k);
+}
+
+console.log(`The keys of the map are: ${[...map.keys()]}`)
+
+console.log("----------------------------");
+
+// Para mostrar o valor dos valores:
+
+console.log(Array.from(map.values()));
+
+for (let [key, value] of map) {
+    console.log(value);
 }
 
 for (let v of map.values()) {
     console.log("value", v);
 }
 
-console.log(Array.from(map.values()));
+console.log(`The values of the map are ${[...map.values()]}`)
+
+console.log("----------------------------");
+
+// Para mostrar o valor das chaves e dos valores:
+
+console.log(Array.from(map.entries()));
 
 for (let [key, value] of map.entries()) {
     console.log("entry", key, value);
 }
 
-console.log(Array.from(map.entries()));
+console.log("----------------------------");
 
 const usuarios = new Map();
 usuarios.set(0, { nome: "Ayrton", pais: "Brasil" });
