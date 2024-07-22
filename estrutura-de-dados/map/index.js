@@ -60,20 +60,3 @@ if(map.has(obj)) {
 console.log(map);
 
 console.log('----------------------------');
-
-// Se tentarmos declarar um objeto com duas chaves iguais
-// Vai acontecer da chave que está mais embaixo substituir a chave que está mais acima
-const objWithSamekey = {
-    'a': 1,
-    'a': 2,
-}
-
-console.log(objWithSamekey)
-
-// Se quisermos garantir que os valores sejam únicos
-const mapWithSameKey = new Map();
-
-mapWithSameKey.set('a', 1);
-mapWithSameKey.set('a', 2);
-
-console.log(mapWithSameKey)
