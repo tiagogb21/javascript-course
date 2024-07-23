@@ -6,6 +6,19 @@
 - O Map permite qualquer tipo, até mesmo objetos e array
 - Assim como array, ele mantém a ordem dos elementos (diferente de objetos)
 - Você consegue acesso rápido a um valor (semelhante a objetos)
+- Obs.: O prototype de Map é diferente do prototype de Object, isso significa que cada possui seu conjunto de atributos e métodos, apesar de alguns serem parecidos
+
+- Iteração:
+    - Map é iterável
+    - Object não implementa um protocolo de iteração
+
+- Desempenho:
+    - Map --> Apresenta melhor desempenho em cenários que envolvem adições e remoções frequentes de pares chave-valor.
+    - Object --> Não otimizado para adições e remoções frequentes de pares chave-valor.
+
+- Serialização e análise sintática:
+    - Map --> Não há suporte nativo
+    - Object --> Suporte para JSON
 */
 
 const map = new Map([["message", "Hello"]]);
@@ -171,3 +184,39 @@ const usuariosBrasil = Array.from(usuarios.entries()).filter(function (
 const mapUsuariosBrasil = new Map(usuariosBrasil);
 
 console.log(mapUsuariosBrasil.get(2));
+
+
+console.log("----------------------------");
+
+
+const original = new Map([[1, "one"]]);
+
+const clone = new Map(original);
+
+console.log(clone.get(1)); // one
+console.log(original === clone); // false (useful for shallow comparison)
+
+
+console.log("----------------------------");
+
+
+// Maps merged with Arrays:
+const first = new Map([
+    [1, "one"],
+    [2, "two"],
+    [3, "three"],
+]);
+
+const second = new Map([
+    [1, "uno"],
+    [2, "dos"],
+]);
+
+// Merge maps with an array. The last repeated key wins.
+const merged = new Map([...first, ...second, [1, "eins"]]);
+
+console.log(merged)
+
+console.log(merged.get(1)); // eins
+console.log(merged.get(2)); // dos
+console.log(merged.get(3)); // three
