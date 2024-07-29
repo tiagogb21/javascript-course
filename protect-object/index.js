@@ -52,14 +52,3 @@ console.log('After attempting to change doors:', car); // { type: 'BMW', model: 
 // Tentar excluir a propriedade 'color' (não terá efeito)
 delete car.color;
 console.log('After attempting to delete color:', car); // { type: 'BMW', model: 734, color: 'blue' }
-
-
-// Object.freeze() faz com que um objeto não possa ser alterado de nenhuma maneira. Ele impede:
-
-    // 1 - Adição de novas propriedades: Não é possível adicionar novas propriedades ao objeto.
-
-    // 2 - Exclusão de propriedades existentes: Não é possível deletar propriedades do objeto.
-
-    // 3 - Modificação de valores de propriedades existentes: Não é possível alterar os valores das propriedades existentes.
-
-    // 4 - Alteração de propriedades de configuração: Não é possível alterar os atributos de configuração de propriedades (como writable, enumerable, configurable).
