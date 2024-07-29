@@ -1,5 +1,7 @@
 // Métodos de Proteção de Objetos
 
+// obs.: arrays também podem ser protegidos, uma vez que arrays também são objetos
+
 const car = {
     type: 'BMW',
     model: 734,

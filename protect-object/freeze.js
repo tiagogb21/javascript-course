@@ -1,6 +1,12 @@
-// Object.freeze() faz com que um objeto não possa ser alterado de nenhuma maneira. Transforma o objeto em imutável.
+// Object.freeze() faz com que um objeto não possa ser alterado de nenhuma maneira.
+
+// Transforma o objeto em imutável.
 
     // Importante! A imutabilidade é superficial, ou seja, as propriedades do objeto que são objetos ou arrays ainda podem ser modificadas, a menos que essas propriedades também sejam congeladas.
+
+
+// Objetos com freeze são somente leitura
+
 
 // Object.freeze() impede:
 
